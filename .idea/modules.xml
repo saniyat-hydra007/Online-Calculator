@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AOOP/AOOP.iml" filepath="$PROJECT_DIR$/AOOP/AOOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FX/FX.iml" filepath="$PROJECT_DIR$/FX/FX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FX 2/FX 2.iml" filepath="$PROJECT_DIR$/FX 2/FX 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SOCKET - Copy.iml" filepath="$PROJECT_DIR$/.idea/SOCKET - Copy.iml" />
+    </modules>
+  </component>
+</project>
