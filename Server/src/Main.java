@@ -18,7 +18,7 @@ public class Main {
             String data;
             StringBuilder history = new StringBuilder();
 
-            while ((data = reader.readLine())!= null) {
+            while ((data = reader.readLine()) != null) {
                 try {
                     if (data.equals("add")) {
                         String a = reader.readLine();
@@ -83,8 +83,7 @@ public class Main {
             }
             writer.close();
             reader.close();
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

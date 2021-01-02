@@ -19,7 +19,7 @@ public class Controller {
     BufferedReader reader;
     BufferedWriter writer;
 
-    public Controller(){
+    public Controller() {
         try {
             Socket socket = new Socket("127.0.0.1", 5000);
 
@@ -29,14 +29,13 @@ public class Controller {
             InputStreamReader isr = new InputStreamReader(socket.getInputStream());
             reader = new BufferedReader(isr);
 
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     @FXML
-    void addFunction(){
+    void addFunction() {
         String a = inputA.getText();
         String b = inputB.getText();
 
@@ -57,15 +56,15 @@ public class Controller {
             String res = reader.readLine();
             resultTA.setText(res);
 
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             e.printStackTrace();
-        }
-        catch ( IOException e2){
+        } catch (IOException e2) {
             e2.printStackTrace();
         }
     }
+
     @FXML
-    void subFunction(){
+    void subFunction() {
         String a = inputA.getText();
         String b = inputB.getText();
 
@@ -86,16 +85,16 @@ public class Controller {
             String res = reader.readLine();
             resultTA.setText(res);
 
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             e.printStackTrace();
-        }
-        catch ( IOException e2){
+        } catch (IOException e2) {
             e2.printStackTrace();
         }
 
     }
+
     @FXML
-    void multFunction(){
+    void multFunction() {
         String a = inputA.getText();
         String b = inputB.getText();
 
@@ -116,17 +115,16 @@ public class Controller {
             String res = reader.readLine();
             resultTA.setText(res);
 
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             e.printStackTrace();
-        }
-        catch ( IOException e2){
+        } catch (IOException e2) {
             e2.printStackTrace();
         }
 
     }
 
     @FXML
-    void divFunction(){
+    void divFunction() {
         String a = inputA.getText();
         String b = inputB.getText();
 
@@ -147,16 +145,16 @@ public class Controller {
             String res = reader.readLine();
             resultTA.setText(res);
 
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             e.printStackTrace();
-        }
-        catch ( IOException e2){
+        } catch (IOException e2) {
             e2.printStackTrace();
         }
 
     }
+
     @FXML
-    void HistoryFunction(){
+    void HistoryFunction() {
         try {
 
             writer.write("history\n");
@@ -164,15 +162,14 @@ public class Controller {
 
             String line;
             resultTA.setText(" ");
-            while ((line = reader.readLine())!= null){
-               if(line.equals("<eof>")) break;
+            while ((line = reader.readLine()) != null) {
+                if (line.equals("<eof>")) break;
                 resultTA.appendText(line + "\n");
             }
 
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             e.printStackTrace();
-        }
-        catch ( IOException e2){
+        } catch (IOException e2) {
             e2.printStackTrace();
         }
     }
